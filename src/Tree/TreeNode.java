@@ -62,6 +62,64 @@ public class TreeNode {
 		}
 		System.out.println(this.value);
 	}
+
+
+
+	public void frontShow() {
+		// TODO Auto-generated method stub
+		System.out.println(this.value);
+		if(lNode!=null){
+			lNode.frontShow();
+		}
+		if(rNode!=null){
+			rNode.frontShow();
+		}
+	}
+
+
+
+	public TreeNode frontSearch(int i) {
+		// TODO Auto-generated method stub
+		if(this.value==i) {
+			return this;
+		}
+		if(lNode!=null) {
+			if(lNode.frontSearch(i)!=null) {
+				return lNode.frontSearch(i);
+			}
+		}
+		if(rNode!=null) {
+			if(rNode.frontSearch(i)!=null) {
+				return rNode.frontSearch(i);
+			}
+		}
+		return null;
+	}
+
+
+
+	public void delete(int i) {
+		// TODO Auto-generated method stub
+		
+		TreeNode parent=this;
+		if(lNode!=null) {
+			if(lNode.getValue()==i) {
+				parent.lNode=null;
+				return;
+			}else {
+				lNode.delete(i);
+			}
+		}
+		if(rNode!=null) {
+			if(rNode.getValue()==i) {
+				parent.rNode=null;
+				return;
+			}else {
+				rNode.delete(i);
+			}
+		}
+		
+	}
 	
 	
 	

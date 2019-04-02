@@ -16,11 +16,17 @@ public class TestBinaryTree {
 		rootR.setlNode(new TreeNode(6));
 		rootR.setrNode(new TreeNode(7));
 		
-		//binTree.frontShow();
-		//binTree.midShow();
-		binTree.afterShow();
+		binTree.frontShow();
+//		binTree.midShow();
+//		binTree.afterShow();
 		
-		
+//		TreeNode result = binTree.frontSearch(7);
+//		
+//		System.out.println(result);
+		//System.out.println(result==rootR);
+		binTree.delete(1);
+		System.out.println("=============================");
+		binTree.frontShow();
 		
 	}
 }

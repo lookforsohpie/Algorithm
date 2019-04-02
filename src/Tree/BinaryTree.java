@@ -14,10 +14,14 @@ public class BinaryTree {
 
 	public void frontShow() {
 		// TODO Auto-generated method stub
-		front(root);
+		//front(root);
+		if(root!=null) {
+			root.frontShow();
+		}
+		
 	}
 	
-	public void front(TreeNode node){
+	private void front(TreeNode node){
 		if(node!=null){
 			System.out.println(node.getValue());
 			if(node.lNode!=null){
@@ -38,6 +42,20 @@ public class BinaryTree {
 	public void afterShow() {
 		// TODO Auto-generated method stub
 		root.afterShow();
+	}
+
+	public TreeNode frontSearch(int i) {
+		// TODO Auto-generated method stub
+		return root.frontSearch(i);
+	}
+
+	public void delete(int i) {
+		// TODO Auto-generated method stub
+		if(root.value==i) {
+			root=null;
+			return;
+		}
+		root.delete(i);
 	}
 	
 	
